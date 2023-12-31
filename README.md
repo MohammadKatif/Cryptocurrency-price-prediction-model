@@ -1,7 +1,13 @@
 # Cryptocurrency Price Prediction Model
 This is a Deep learning project made using Pytorch and some additional libraries which basically functions to accurately forceast future price of the Cryptocurrency **"Ethereum" in USD**  
 Since the data used in this project will be timeseries data so I will be using Long Short Term Memory(LSTM) model throught this project.
-For this project I learned about Deep learning from the [Official 60 min blitz tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) and the [Official Pytorch documentation](https://pytorch.org/docs/stable/index.html) made by the Pytorch developers themselves and I also took help from [Peter](https://github.com/VaguelySerious/) who is a software engineer and has already studied about this field(Thanks alot Peter!)
+For this project I learned about Deep learning from the [Official 60 min blitz tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) and the [Official Pytorch documentation](https://pytorch.org/docs/stable/index.html) made by the Pytorch developers themselves and I also took help from [Peter](https://github.com/VaguelySerious/) who is a software engineer and has already studied about this field, Thanks alot Peter!
+## Background about Deep learning:
+* Neural Network is just a collection of nested functions.  
+* These functions are defined by parameters, which consist of Weight and Bias. And these parameters themselves are stored inside Pytorch tensors.  
+* Pytorch tensors are a specialized datastructure similar to numpy arrays. The inputs and outputs of a NN model and the parameters of the functions are encoded in tensors in Pytorch. (Tensors can also run on GPU)
+## How a Neural Network Model is Trained?
+* Forward P
 ## Crypto Model 1:
 This is the very first code that I had written for this project, where I discovered the Open, High, Low, Close or also known as **OHLC** dataset of the cryptocurrency "Etherum". And I also explored two libraries for plotting the financial data, from which the first one is [Mplfinance](https://coderzcolumn.com/tutorials/data-science/candlestick-chart-in-python-mplfinance-plotly-bokeh#) which offers multiple types and styles of graph to plot financial data, from which my favourite type is 'candle' and style is 'tradingview' but it lacks customisation of the graph which makes it a very limited library for plotting the graphs. And the second library that I explored is [Matplotlib](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html) which is a very big library and offers a quite large range of customization for the graphs which makes it very useful for my project. Nevertheless, I will be using both of these libraries throughout the code of this project.
 ## Crypto Model 2:
