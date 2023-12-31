@@ -17,4 +17,8 @@ For this article I took reference from two articles, the first one being the [pr
 The model I am using  in this code requires the input and output both of the same size, but the input I am providing to this model has the size of 6 (Open, High, Low, Close, AdjClose, Volume) and the output has the size of 1 (Close price). That's why the Mean Sqquared Error(MSE) Loss seems to be stuck and is not reducing below 1500 in the training loop.
 # Crypto Model 6:
 This code is written by Peter, where he identified the issue from previous code and changed the input size to 1(Close price) so that It will match with the output size of 1 (Also Close price). Due to this the MSE Loss of the model successfully reduced from 1600 to somewhere near 100. Also in this code the model is shifted to CUDA enabled GPU because it will take a long time to train in CPU, and because my laptop doesn't have CUDA enabled GPU so I used [Google Colab](https://colab.google/) because it provides success to powerful computing resources such as CUDA enabled GPU.
+## Problem:
+The problem is that the input feature is only the Close price but we need the Open, High, Low and Close all as our input features which is not possible because the input size and ouput size should be same for this model.
+# Crypto Model 7:
+
 
