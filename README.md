@@ -44,7 +44,13 @@ The problem is still the same as the previous code.
 ## Crypto Model 9:
 In this code I will be doing feature engineering to add several new features in the model and track its affect on the model performance(Error/ Loss). The purpose is to identify the features that will improve the accuracy of the model and identify the ones that will not improve the accuracy of the model.
 ### Seasonality:
-I added days of the week, week of the month and month of the year as features so that the model can identify the seasonality. Lets say if the prices are usually high or low in the specific timeperiod then the model can identify the pattern and learn from it in the training. The model can not detect this pattern because the model is not training on the entire data instead it is training in windows/ chunks so it is hard for it to identify seasonality. 
+I added 3 columns (daysofweek, weeksofmonth and monthsofyear) as features into the data so that the model can identify the seasonality patterns in the data.  
+Features= Open, High, Low, Close, Days, Week, Month
+Prediction target= Open, High, Low, Close, Days, Week, Month
+#### Results:
+If I add these three additional columns into my data and don't do any changes to the code then the training loss increases from 0.000495 to 0.010178 on 300th epoch.
+#### Reasons:
+The error can increase because unlike before this time the model has to predict 3 more additional values (daysofweek, weekofmonth, monthofyear) each time when it is trained or evaluated.
 
 
 
