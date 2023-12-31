@@ -4,14 +4,14 @@ Since the data used in this project will be timeseries data so I will be using L
 For this project I learned about Deep learning from the [Official 60 min blitz tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) and the [Official Pytorch documentation](https://pytorch.org/docs/stable/index.html) made by the Pytorch developers themselves and I also took help from [Peter](https://github.com/VaguelySerious/) who is a software engineer and has already studied about this field, Thanks alot Peter!
 ## Background about Deep learning:
 * Neural Network is just a collection of nested functions.  
-* These functions are defined by parameters, which consist of Weight and Bias. And these parameters themselves are stored inside Pytorch tensors.  
-* Pytorch tensors are a specialized datastructure similar to numpy arrays. The inputs and outputs of a NN model and the parameters of the functions are encoded in tensors in Pytorch. (Tensors can also run on GPU)
+* These functions are defined by **Parameters(Weight and Bias)**. And these parameters themselves are stored inside Pytorch tensors.  
+* Pytorch tensors are a specialized datastructure similar to numpy arrays. The inputs and outputs of a NN model and the parameters of the functions are **encoded in tensors** in Pytorch. (Tensors can also run on GPU)
 ## How a Neural Network Model is Trained?
 ### Forward Propagation:
 * In Forward propagation the model **makes its best guess** about the correct target output.
 * It does this by running the input data through each of these functions with their corresponding parameters to the best guess about the output.  
 ### Back Propagation:
-* In Backward propagation the model adjusts the parameters of its functions according to the error/ loss it made in its guess.
+* In Backward propagation the model **adjusts the parameters** of its functions according to the error/ loss it made in its guess.
 * It does this by **moving backwards** from the output of the model, collecting the **derivative/ gradient** of the function which was responsible for the error/ loss which is also known as the **'loss function'**, and then optimizing the parameters of the loss function using **gradient descent**.
 ## Crypto Model 1:
 This is the very first code that I had written for this project, where I discovered the Open, High, Low, Close or also known as **OHLC** dataset of the cryptocurrency "Etherum". And I also explored two libraries for plotting the financial data, from which the first one is [Mplfinance](https://coderzcolumn.com/tutorials/data-science/candlestick-chart-in-python-mplfinance-plotly-bokeh#) which offers multiple types and styles of graph to plot financial data, from which my favourite type is 'candle' and style is 'tradingview' but it lacks customisation of the graph which makes it a very limited library for plotting the graphs. And the second library that I explored is [Matplotlib](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html) which is a very big library and offers a quite large range of customization for the graphs which makes it very useful for my project. Nevertheless, I will be using both of these libraries throughout the code of this project.
