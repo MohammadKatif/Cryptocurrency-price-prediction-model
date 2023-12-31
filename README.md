@@ -6,4 +6,9 @@ This is the very first code that I had written for this project, where I discove
 ## Crypto Model 2:
 In this code I used [Yahoo Finance API](https://pypi.org/project/yfinance/) to fetch the historical OHLC dataset of Ethereum in USD. Furthermore, I also discovered a new library known as [**"Technical Analysis Library"**](https://ta-lib.github.io/ta-lib-python/) or [**"TA-Lib"**](https://pypi.org/project/TA-Lib/), which was very difficult to download untill I watched this [youtube video](https://www.youtube.com/watch?v=30BaSfz0FGE&t=285s). TA-Lib is a very interesting library as it offers candlestick pattern recognition and more than 150 indicators. The benefit of this library is that it does all the complicated calculation to for candlestick patterns and indicators so you don't have to! In this code, I planned on using these candlestick patterns and indicators as features for the model but later on I understood the **Beauty of Deep learning** which makes this library almost useless.
 # Crypto Model 3:
-In this code
+In this article I made my first LSTM model for which I took reference from [this article](https://cnvrg.io/pytorch-lstm/). After writing this code for a moment I thought that I have successfully completed the project, but to my dismay it was not the case here. 
+## Problem:
+This code lacked the "Concept of Windowing" which makes it totally useless for my project!
+## The Concept of Windowing:
+The model needs to look at N days of data(which is the window) and then predict N+n_ahead th day of data. The point is that, the model will predict the Close price for "n_ahead" days by looking at the "past N days" of OHLC data.
+# Crypto Model 4:
