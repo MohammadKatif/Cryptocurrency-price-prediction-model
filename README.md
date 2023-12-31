@@ -22,6 +22,10 @@ The problem is that the input feature is only the Close price but we need the Op
 # Crypto Model 7:
 This code is also written by Peter to solve the problem that arised in his previous code. Here he changed the input features size to be 4 (Open, High, Low, Close) and the ouput prediction target size to also be 4 (Open, High, Low, Close) after this he basically ignored the Open, High, Low that were in the output and only took the 'Close price' from that predicted output and compared it with the 'Actual Close Price' in the graphing code at the end. Moreover, here he also used a Mean of Mean Squared Error or MMSE to calculate Loss for the backpropagation instead of using the normal MSE one.
 ## Problem:
-If I want to add more features then I would also need to make them the prediction target too, which can result in significant reduction is the accuracy of the model when using more features.
+If I want to add more features then I would also need to make them the prediction target too, which can result in significant reduction in the accuracy of the model when using more features.
+# Crypto Model 8:
+This is just a slightly improved version of the previous code where Peter increased the layers of the model to increase accuracy and added two more graphs into the code to get better understanding of the model.
+## Problem:
+The problem is still the same as the previous code.
 
 
