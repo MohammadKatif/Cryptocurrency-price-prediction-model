@@ -7,10 +7,10 @@ For this project I learned about Deep learning from the [Official 60 min blitz t
 * These functions are defined by parameters, which consist of Weight and Bias. And these parameters themselves are stored inside Pytorch tensors.  
 * Pytorch tensors are a specialized datastructure similar to numpy arrays. The inputs and outputs of a NN model and the parameters of the functions are encoded in tensors in Pytorch. (Tensors can also run on GPU)
 ## How a Neural Network Model is Trained?
-Forward Propagation:
+### Forward Propagation:
 * In Forward propagation the model **makes its best guess** about the correct target output.
-* It does this by running the input data through each of these functions with their corresponding parameters to the best guess about the output.
-Back Propagation:
+* It does this by running the input data through each of these functions with their corresponding parameters to the best guess about the output.  
+### Back Propagation:
 * In Backward propagation the model adjusts the parameters of its functions according to the error/ loss it made in its guess.
 * It does this by **moving backwards** from the output of the model, collecting the **derivative/ gradient** of the function which was responsible for the error/ loss which is also known as the **'loss function'**, and then optimizing the parameters of the loss function using **gradient descent**.
 ## Crypto Model 1:
