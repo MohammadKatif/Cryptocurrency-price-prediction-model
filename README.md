@@ -6,7 +6,7 @@ For this project I learned about Deep learning from the [Official 60 min blitz t
 * Neural Network is just a collection of nested functions.  
 * These functions are defined by **Parameters(Weight and Bias)**. And these parameters themselves are stored inside Pytorch tensors.  
 * Pytorch tensors are a specialized datastructure similar to numpy arrays. The inputs and outputs of a NN model and the parameters of the functions are **encoded in tensors** in Pytorch. (Tensors can also run on GPU)
-## How a Neural Network Model is Trained?
+## How a Neural Network is Trained?
 ### Forward Propagation:
 * In Forward propagation the model **makes its best guess** about the correct target output.
 * It does this by running the input data through each of these functions with their corresponding parameters to the best guess about the output.  
@@ -34,9 +34,9 @@ The problem is that the input feature is only the Close price but we need the Op
 # Crypto Model 7:
 This code is also written by Peter to solve the problem that arised in his previous code. Here he changed the input features size to be 4 (Open, High, Low, Close) and the ouput prediction target size to also be 4 (Open, High, Low, Close) after this he basically ignored the Open, High, Low that were in the output and only took the 'Close price' from that predicted output and compared it with the 'Actual Close Price' in the graphing code at the end. Moreover, here he also used a Mean of Mean Squared Error or MMSE to calculate Loss for the backpropagation instead of using the normal MSE one.
 ## Problem:
-If I want to add more features then I would also need to make them the prediction target too, which can result in significant reduction in the accuracy of the model when using more features.
+If I want to add more features then I would also need to make them the prediction target too, which might result in significant reduction in the accuracy of the model when using more features. (Although I haven't acutally tested whether this would affect the accuracy of the model or not)
 # Crypto Model 8:
-This is just a slightly improved version of the previous code where Peter increased the layers of the model to increase accuracy and added two more graphs into the code to get better understanding of the model.
+This is just a slightly improved version of the previous code where Peter increased the layers of the model to increase accuracy and added two more graphs into the code to get better understanding of the model.   (Once again, thanks for all the help Peter!)
 ## Problem:
 The problem is still the same as the previous code.
 
