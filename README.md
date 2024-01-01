@@ -48,7 +48,7 @@ I added 3 columns (daysofweek, weeksofmonth and monthsofyear) as features into t
 Features= Open, High, Low, Close, Days, Week, Month
 Prediction target= Open, High, Low, Close, Days, Week, Month
 #### Results:
-If I add these three additional columns into my data and don't do any changes to the code then the training loss increases from 0.000495 to 0.002075 on 300th epoch.
+If I add these three additional columns into my data and don't do any changes to the code then the training loss increases from 0.000495 to 0.003328 on 300th epoch. Even after increasing the number of epochs to 500 and the size of hidden layers propotional to the input size there were no improvements in the model's accuracy to notice.
 #### Reasons:
 The error can increase because unlike before this time the model has to predict 3 more additional values (daysofweek, weekofmonth, monthofyear) each time when it is trained or evaluated.
 
