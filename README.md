@@ -44,13 +44,17 @@ The problem is still the same as the previous code.
 ## Crypto Model 9:
 In this code I will be doing feature engineering to add several new features in the model and track its affect on the model performance(Error/ Loss). The purpose is to identify the features that will improve the accuracy of the model and identify the ones that will not improve the accuracy of the model.
 ### Seasonality:
-I added 3 columns (daysofweek, weeksofmonth and monthsofyear) as features into the data so that the model can identify the seasonality patterns in the data.  
-Features= Open, High, Low, Close, Days, Week, Month
-Prediction target= Open, High, Low, Close, Days, Week, Month
-#### Results:
-If I add these three additional columns into my data and don't do any changes to the code then the training loss increases from 0.000495 to 0.003328 on 300th epoch. Even after increasing the number of epochs to 500 I saw no improvements, but when I increased the size of hidden layers propotional to the input size then up and down trend prediction's accuracy seemed to have increase.
-#### Reasons:
-The error can increase because unlike before this time the model has to predict 3 more additional values (daysofweek, weekofmonth, monthofyear) each time when it is trained or evaluated.
+#### Take#1: Without any additional columns for seasonality
+##### Result: MAE= 20
+#### Take#2: With 1 additional column: dayofweek
+##### Result: MAE= 53
+#### Take#3: With 1 additional column: weekofmonth
+##### Result: MAE= 96
+#### Take#4: With 1 additional column: monthofyear
+##### Result: MAE= 73
+#### Take#2: With 3 additional columns: dayofweek, weekofmonth, monthofyear
+##### Result: MAE= 99
+#### Outcome: For some reason seasonality is not a factor that affects the closing price of ethereum.
 
 
 
